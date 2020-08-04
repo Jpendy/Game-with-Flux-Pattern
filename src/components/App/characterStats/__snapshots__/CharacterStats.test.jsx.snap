@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterStats component renders CharacterStats 1`] = `
+<div>
+  <dl>
+    <dt>
+      Health
+    </dt>
+    <dd>
+      100
+    </dd>
+    <dt>
+      Attack
+    </dt>
+    <dd>
+      10
+    </dd>
+    <dt>
+      Experience
+    </dt>
+    <dd>
+      0
+    </dd>
+  </dl>
+</div>
+`;
