@@ -1,5 +1,7 @@
 import React from 'react';
 import Character from '../components/character/Character';
+import styles from './GameContainer.css';
+import GameControls from '../components/gameControls/GameControls';
 
 export default function GameContainer() {
 
@@ -11,10 +13,19 @@ export default function GameContainer() {
     experience: 0
   };
 
+  const enemy = {
+    image: 'https://image.pngaaa.com/353/31353-middle.png',
+    name: 'Frieza',
+    health: 80,
+    attack: 5,
+    experience: 20
+  };
+
   return (
-    <section>
+    <section className={styles.gameSection} >
       <Character character={character} />
-      {/* <Character character={character} />             */}
+      <GameControls />
+      <Character character={enemy} />            
     </section>
   );
 }
