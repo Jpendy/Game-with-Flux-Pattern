@@ -1,3 +1,4 @@
+import { nameAndImages, randomNum } from '../enemies';
 
 export const initialState = {
   character: {
@@ -24,7 +25,15 @@ export default function reducer(state, action) {
       return { ...state, character: { ...state.character, health: state.character.health + 5 } };
     case 'ATTACK_CHARACTER':
       return { ...state, character: { ...state.character, health: state.character.health - state.enemy.attack } };
-
+    case 'SET_EXPERIENCE':
+      return { ...state, character: { ...state.character, experience: state.character.experience + state.enemy.experience } };
+    case 'SET_NEW_ENEMY':
+      return { ...state, enemy: {
+        ...nameAndImages[randomNum(5)],
+        health: randomNum(100),
+        attack: randomNum(10),
+        experience: randomNum(20)
+      } };
     default:
       return state;
   }
