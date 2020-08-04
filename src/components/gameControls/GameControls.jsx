@@ -1,13 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './GameControls.css';
+import { useTurn } from '../../hooks/gameContext';
 
 export default function GameControls() {
+
+  const turn = useTurn();
   return (
     <section className={styles.controlsSection} >
-      <button>Attack</button>
-      <button>Heal</button>
-      <button>Run</button>
+      <button onClick={() => turn('ATTACK_ENEMY')} >Attack</button>
+      <button onClick={() => turn('HEAL')} >Heal</button>
+      <button onClick={() => turn('ATTACK_ENEMY')} >Run</button>
     </section>
   );
 }
