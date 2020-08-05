@@ -9,10 +9,7 @@
     animation-fill-mode: forwards;
     }
     
-.Hitting {
-
-}   
-
+    
 @keyframes dead {
     from{ transform: translateY(0px);}
     to{transform: translateY(700px);}
