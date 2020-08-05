@@ -1,0 +1,9 @@
+.CharacterDead {
+animation-name: dead;
+animation-duration: 1.5s;
+}
+
+@keyframes dead {
+    from{ transform: translateY(0px);}
+    to{transform: translateY(500px);}
+}

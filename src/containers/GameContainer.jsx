@@ -12,18 +12,28 @@ export default function GameContainer() {
 
   useEffect(() => {
     if(enemy.health > 0) return;
-    dispatch({ type: 'SET_NEW_ENEMY', payload: 80 });
+    dispatch({ type: 'ENEMY_DEATH' });
+    setTimeout(()=> dispatch({ type: 'SET_NEW_ENEMY', payload: 80 }), 2000) ;
     dispatch({ type: 'SET_EXPERIENCE' });  
   }, [enemy.health]);
 
+  const className = () => {
+    if(character.hitting) return styles.Hitting;
+    if(character.status === 'DEAD') return styles.CharacterDead;
+    return;
+  };
 
-  if(character.health <= 0) return  <p>Game Over</p>;
+  if(character.health <= 0) return <p>Game Over</p>;
  
   return (
     <section className={styles.gameSection} >
-      <Character character={character} />
+      <section className={className()}  >
+        <Character character={character} />
+      </section>
       <GameControls />
-      <Character character={enemy} />            
+      <section className={enemy.status === 'DEAD' ? styles.CharacterDead : ''}  >
+        <Character character={enemy} />
+      </section>
     </section>
   );
 }

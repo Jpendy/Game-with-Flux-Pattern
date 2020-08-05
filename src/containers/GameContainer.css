@@ -2,3 +2,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+.CharacterDead {
+    animation-name: dead;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    }
+    
+.Hitting {
+
+}   
+
+@keyframes dead {
+    from{ transform: translateY(0px);}
+    to{transform: translateY(700px);}
+}
+/* 
+@keyframes hitting {
+    from{ transform: ;}
+} */

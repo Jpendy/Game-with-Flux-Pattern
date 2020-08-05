@@ -19,3 +19,5 @@ export const nameAndImages = [{
 export const randomNum = num => {
   return Math.floor(Math.random() * num);
 };
+
+// return Math.floor(((num - 50) * Math.random()) + 50);

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterImage component renders CharacterImage 1`] = `
+<figure>
+  <img
+    src="image"
+    style={
+      Object {
+        "height": "300px",
+      }
+    }
+  />
+</figure>
+`;
