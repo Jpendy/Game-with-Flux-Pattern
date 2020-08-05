@@ -1,6 +1,7 @@
 import React from 'react';
+import GameContainer from '../../containers/GameContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <GameContainer />;
 }
   
